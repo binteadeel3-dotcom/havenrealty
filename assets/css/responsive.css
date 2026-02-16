@@ -1,0 +1,145 @@
+/* ======================================================
+   RESPONSIVE.CSS - HAVEN REALTY (OPTIMIZED)
+   Purpose:
+   - Improve mobile stability
+   - Fix iOS vh issues
+   - Preserve original behavior
+====================================================== */
+
+/* ------------------------------------------------------
+   Tablets & Small Laptops (below 992px)
+------------------------------------------------------ */
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 100px;
+    text-align: center;
+    min-height: 50vh !important;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-search .col-md-4 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navbar-brand img {
+    height: 55px;
+    transition: height 0.3s ease;
+  }
+
+  /* Property Detail Sidebar */
+  .tour-sidebar {
+    position: static !important;
+    top: auto !important;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* Property Main Image */
+  .main-detail-img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ------------------------------------------------------
+   Mobile Phones (below 768px)
+------------------------------------------------------ */
+@media (max-width: 767.98px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+
+  .hero-section {
+    min-height: auto !important;
+  }
+
+  .hero-search {
+    padding: 15px !important;
+  }
+
+  .hero-search select.form-select {
+    font-size: 14px;
+    height: 48px;
+  }
+
+  .bg-light.section-padding .col-md-4 img {
+    width: 65px;
+    height: 65px !important;
+    object-fit: contain;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center !important;
+    margin-top: 15px;
+  }
+
+  /* Video Section */
+  .video-container {
+    height: 300px;
+  }
+
+  /* Specification Icons */
+  .spec-icon-box {
+    padding: 15px 10px;
+  }
+
+  .spec-icon-box strong {
+    font-size: 12px;
+  }
+}
+
+/* ------------------------------------------------------
+   Small Mobile Devices (below 576px)
+------------------------------------------------------ */
+@media (max-width: 575.98px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Touch-Friendly CTA Buttons */
+  .hero-section .btn,
+  .tour-sidebar .btn,
+  .newsletter-form .btn {
+    width: 100%;
+  }
+
+  /* Gallery Thumbnails */
+  .thumb-img {
+    height: 80px;
+    object-fit: cover;
+  }
+
+  /* Mobile Navbar Spacing */
+  .navbar-nav {
+    padding: 20px 0;
+  }
+}
+
+/* ------------------------------------------------------
+   iOS Safari Height Fix (Safe Viewport)
+------------------------------------------------------ */
+@supports (height: 100svh) {
+  .hero-section {
+    min-height: 90svh;
+  }
+}
+
+/* ------------------------------------------------------
+   Reduced Motion Support (Accessibility)
+------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
