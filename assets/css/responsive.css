@@ -143,3 +143,23 @@
     transition: none !important;
   }
 }
+
+.about-page .bg-light.section-padding .col-md-4 img {
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+  .about-page .bg-light.section-padding .col-md-4 img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+}
+
+@media (max-width: 575.98) {
+  .about-page .bg-light.section-padding .col-md-4 img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
